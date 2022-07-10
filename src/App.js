@@ -4,8 +4,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header bg-slate-800 text-blue">
-        <h1 className="bg-blue-500 text-blue-800">HELLO</h1>
+      <header className="App-header">
+        <h1 className="">HELLO</h1>
       </header>
     </div>
   );

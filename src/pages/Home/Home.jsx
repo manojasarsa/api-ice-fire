@@ -1,6 +1,9 @@
 import "./home.css";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+
+    const navigate = useNavigate();
     return (
         <div className="flex flex-col m-auto">
             <header className="header-section w-screen h-screen">
@@ -21,45 +24,50 @@ export const Home = () => {
                         <ul className="text-slate-100 flex justify-evenly p-8">
                             <li>
                                 <div className="w-[15rem] h-auto flex flex-col hover:scale-95 sepia-0 hover:sepia ease-in-out duration-700">
-                                    <img
+                                    <img 
                                         src="https://rukminim1.flixcart.com/image/416/416/jpodaq80/book/5/4/0/a-game-of-thrones-original-imafbuq5eduw9ceb.jpeg?q=70"
                                         className="w-max-full h-auto cursor-pointer"
                                         alt=""
+                                        onClick={() => navigate("/bookdetails")}
                                     />
 
                                 </div>
                             </li>
                             <li><div className="w-[15rem] h-auto flex flex-col hover:scale-95 sepia-0 hover:sepia ease-in-out duration-700">
-                                <img
+                                <img 
                                     src="https://rukminim1.flixcart.com/image/416/416/jpodaq80/book/0/3/3/sfi2-original-imafburhh3hysvqh.jpeg?q=70"
                                     className="w-max-full h-auto cursor-pointer"
                                     alt=""
+                                    onClick={() => navigate("/bookdetails")}
                                 />
 
                             </div></li>
                             <li><div className="w-[15rem] h-auto flex flex-col hover:scale-95 sepia-0 hover:sepia ease-in-out duration-700">
-                                <img
+                                <img 
                                     src="https://rukminim1.flixcart.com/image/416/416/l26hdow0/book/j/0/p/a-storm-of-swords-part-2-blood-and-gold-original-imagdh68ud7nfzqv.jpeg?q=70"
                                     className="w-max-full h-auto cursor-pointer"
                                     alt=""
+                                    onClick={() => navigate("/bookdetails")}
                                 />
 
                             </div></li>
 
                             <li><div className="w-[15rem] h-auto flex flex-col hover:scale-95 sepia-0 hover:sepia ease-in-out duration-700">
-                                <img
+                                <img 
                                     src="https://rukminim1.flixcart.com/image/416/416/jph83gw0/book/0/3/1/a-feast-for-crows-original-imafbzzhtbqghgqx.jpeg?q=70"
                                     className="w-max-full h-auto cursor-pointer"
                                     alt=""
+                                    onClick={() => navigate("/bookdetails")}
                                 />
 
                             </div></li>
 
                             <li><div className="w-[15rem] h-auto flex flex-col hover:scale-95 sepia-0 hover:sepia ease-in-out duration-700">
-                                <img
+                                <img 
                                     src="https://rukminim1.flixcart.com/image/416/416/ki6bgcw0-0/book/i/h/r/a-dance-with-dragons-original-imafyy74ppgfyauq.jpeg?q=70"
                                     className="w-max-full h-auto cursor-pointer"
                                     alt=""
+                                    onClick={() => navigate("/bookdetails")}
                                 />
 
                             </div></li>

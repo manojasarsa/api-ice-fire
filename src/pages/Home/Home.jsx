@@ -1,16 +1,13 @@
 import "./home.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllBooks } from "../../features/Book/helpers/getAllBooks";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export const Home = () => {
 
-    const [url, setUrl] = useState("");
-
-    const navigate = useNavigate();
     const {
-        book: { books, isLoading }
+        book: { books }
     } = useSelector(state => state);
 
     const dispatch = useDispatch();
@@ -35,25 +32,25 @@ export const Home = () => {
     console.log("arr", iceAndFireBooks);
 
     return (
-        <div className="flex flex-col m-auto">
+        <div className="flex flex-col sm:m-auto">
             <header className="header-section h-screen">
 
-                <div className="flex flex-col gap-4 w-[28rem] p-2 ml-[7rem] mt-[15rem]">
+                <div className="flex flex-col gap-4 sm:w-[28rem] p-2 ml-2 sm:ml-[7rem] mt-[20rem] sm:mt-[15rem]">
                     <h1 className="text-5xl text-[#fff] font-extrabold">Your Guide To Game of Thrones</h1>
                     <a className="text-3xl max-w-fit px-5 py-3 text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000" href="#main-section">Explore</a>
                 </div>
 
             </header>
 
-            <main className="main-section h-screen pt-10" id="main-section">
+            <main className="main-section sm:h-screen pt-10" id="main-section">
 
-                <div className="flex flex-col gap-4 w-11/12  p-2 mx-auto mt-[3rem] h-fit">
+                <div className="flex flex-col gap-4 w-11/12 sm:p-2 sm:mx-auto sm:mt-[3rem] sm:h-fit">
                     <h1 className="text-5xl self-center text-[#fff] font-extrabold">Books</h1>
 
-                    <div className="flex books-container bg-black m-2">
+                    <div className="flex flex-wrap sm:flex-nowrap books-container bg-black px-5 m-2">
 
                         {iceAndFireBooks.map((book) => (
-                            <ul key={book.isbn} className="text-slate-100 p-8 flex">
+                            <ul key={book.isbn} className="text-slate-100 px-2 p-8 flex">
 
                                 <li>
                                     <div className="hover:scale-95 sepia-0 hover:sepia ease-in-out duration-700">

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const BookDetails = () => {
 
     const {
-        book: { books, isLoading }
+        book: { books }
     } = useSelector(state => state);
 
     const [selectedBook, setSelectedBook] = useState(books);
@@ -26,13 +26,13 @@ export const BookDetails = () => {
     console.log("BOOK --", selectedBook);
 
     return (
-        <main className="main-book-wrapper h-screen">
+        <main className="main-book-wrapper sm:h-screen">
 
-            <h2 className="px-20 pt-20 text-center text-5xl self-center text-[#fff] font-extrabold">
+            <h2 className="hidden sm:block px-20 pt-20 text-center text-5xl self-center text-[#fff] font-extrabold">
                 Whether you're starting for the first time or looking to dive deeper, we've got you covered.
             </h2>
 
-            <div className="flex flex-col gap-4 w-11/12  p-2 mx-auto mt-[2rem] h-fit">
+            <div className="flex flex-col gap-4 w-11/12  p-2 mx-auto sm:mt-[2rem] h-fit">
 
                 <h1 className="text-5xl self-center px-5 py-4 font-extrabold text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000">About Book</h1>
 

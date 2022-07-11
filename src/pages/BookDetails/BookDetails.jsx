@@ -38,7 +38,7 @@ export const BookDetails = () => {
 
                 <div className="books-container w-full m-2 flex flex-col gap-8">
 
-                    <div className="p-10 text-center mt-4 text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000">
+                    <div className="backdrop-opacity-10 backdrop-invert bg-[#fbbf24]/30 p-10 text-center mt-4 text-black   hover:bg-black/30 hover:text-[#fbbf24] ease-in-out duration-1000">
 
                         <ul className="flex flex-col align-center gap-4">
                             <div className="">

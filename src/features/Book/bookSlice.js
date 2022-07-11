@@ -4,7 +4,6 @@ import { getAllBooks } from "./helpers/getAllBooks";
 
 const initialState = {
     error: "",
-    isLoading: false,
     books: [],
 }
 
@@ -18,15 +17,12 @@ const bookSlice = createSlice({
     },
     extraReducers: {
         [getAllBooks.pending]: (state) => {
-            state.isLoading = true;
             state.error = "";
         },
         [getAllBooks.fulfilled]: (state, { payload }) => {
-            state.isLoading = false;
             state.books = payload;
         },
         [getAllBooks.rejected]: (state, { payload }) => {
-            state.isLoading = false;
             state.error = payload;
         },
 

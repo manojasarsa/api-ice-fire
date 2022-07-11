@@ -10,7 +10,6 @@ export const getAllBooks = createAsyncThunk(
             )
 
             if (status === 200) {
-                console.log(data);
                 return data;
             }
         } catch (err) {

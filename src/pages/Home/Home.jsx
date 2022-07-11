@@ -29,15 +29,18 @@ export const Home = () => {
 
     const iceAndFireBooks = getRequiredBooks(books);
 
-    console.log("arr", iceAndFireBooks);
-
     return (
         <div className="flex flex-col sm:m-auto">
             <header className="header-section h-screen">
 
                 <div className="flex flex-col gap-4 sm:w-[28rem] p-2 ml-2 sm:ml-[7rem] mt-[20rem] sm:mt-[15rem]">
-                    <h1 className="text-5xl text-[#fff] font-extrabold">Your Guide To Game of Thrones</h1>
-                    <a className="text-3xl max-w-fit px-5 py-3 text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000" href="#main-section">Explore</a>
+                    <h1 className="text-5xl text-[#fff] font-extrabold">
+                        Your Guide To Game of Thrones
+                    </h1>
+                    <a className="text-3xl max-w-fit px-5 py-3 text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000"
+                        href="#main-section">
+                        Explore
+                    </a>
                 </div>
 
             </header>
@@ -68,13 +71,10 @@ export const Home = () => {
                             </ul>
                         )
                         )}
-                        
 
                     </div>
-
                 </div>
-
             </main>
         </div>
     )
-}
+};

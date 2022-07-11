@@ -2,6 +2,7 @@ import "./bookdetails.css";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const BookDetails = () => {
 
@@ -25,7 +26,7 @@ export const BookDetails = () => {
     console.log("BOOK --", selectedBook);
 
     return (
-        <main className="main-book-wrapper w-screen h-screen">
+        <main className="main-book-wrapper h-screen">
 
             <h2 className="px-20 pt-20 text-center text-5xl self-center text-[#fff] font-extrabold">
                 Whether you're starting for the first time or looking to dive deeper, we've got you covered.
@@ -33,22 +34,41 @@ export const BookDetails = () => {
 
             <div className="flex flex-col gap-4 w-11/12  p-2 mx-auto mt-[2rem] h-fit">
 
-                <h1 className="text-5xl self-center text-[#fff] font-extrabold">About Book</h1>
+                <h1 className="text-5xl self-center px-5 py-4 font-extrabold text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000">About Book</h1>
 
-                <div className="books-container w-full bg-black m-2">
+                <div className="books-container w-full m-2 flex flex-col gap-8">
 
-                    <div className="p-10 text-center mt-4 text-[#fff]">
+                    <div className="p-10 text-center mt-4 text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000">
 
-                        <ul className="flex flex-col align-center">
-                            <li className="">NAME: <span className="">{selectedBook.name}</span></li>
-                            <li className="">AUTHORS: <span className="">{selectedBook.authors}</span></li>
-                            <li className="">PUBLISHER: <span className="">{selectedBook.publisher}</span></li>
-                            <li className="">COUNTRY: <span className="">{selectedBook.country}</span></li>
-                            <li className="">MEDIA TYPE: <span className="">{selectedBook.mediaType}</span></li>
-                            <li className="">NUMBER OF PAGES: <span className="">{selectedBook.numberOfPages}</span></li>
+                        <ul className="flex flex-col align-center gap-4">
+                            <div className="">
+                                <span className="text-3xl font-bold pr-5">AUTHORS: </span>
+                                <span className="text-3xl font-bold pr-5">{selectedBook.authors}</span>
+                            </div>
+
+                            <div className="">
+                                <span className="text-3xl font-bold pr-5">PUBLISHER: </span>
+                                <span className="text-3xl font-bold pr-5">{selectedBook.publisher}</span>
+                            </div>
+
+                            <div className="">
+                                <span className="text-3xl font-bold pr-5">COUNTRY: </span>
+                                <span className="text-3xl font-bold pr-5">{selectedBook.country}</span>
+                            </div>
+
+                            <div className="">
+                                <span className="text-3xl font-bold pr-5">MEDIA TYPE: </span>
+                                <span className="text-3xl font-bold pr-5">{selectedBook.mediaType}</span>
+                            </div>
+
+                            <div className="">
+                                <span className="text-3xl font-bold pr-5">NUMBER OF PAGES: </span>
+                                <span className="text-3xl font-bold pr-5">{selectedBook.numberOfPages}</span>
+                            </div>
                         </ul>
 
                     </div>
+                    <Link to={"/"} className="bg-black text-xl text-white w-fit px-4 py-2">{"<-"} Home</Link>
                 </div>
             </div>
 

@@ -5,7 +5,7 @@ export const NavRoutes = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/bookdetails" element={<BookDetails />} />
+            <Route path="/:bookid" element={<BookDetails />}></Route>
             <Route path="*" element={<h2> OOPS! Page Not Found</h2>} />
         </Routes>
     )

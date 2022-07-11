@@ -1,9 +1,30 @@
 import "./home.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllBooks } from "../../features/Book/helpers/getAllBooks";
+import { useEffect } from "react";
 
 export const Home = () => {
 
     const navigate = useNavigate();
+    const { 
+        book: { books, isLoading}
+    } = useSelector(state => state);
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getAllBooks());
+    }, []);
+
+    const getRequiredBooks = (books) => {
+        return books.filter((book) => ["A Game of Thrones", "A Clash of Kings", "A Storm of Swords", "A Feast for Crows", "A Dance with Dragons"].includes(book.name));
+    }
+
+    const iceAndFireBooks = getRequiredBooks(books);
+
+    console.log("arr", iceAndFireBooks);
+
     return (
         <div className="flex flex-col m-auto">
             <header className="header-section w-screen h-screen">
@@ -82,9 +103,18 @@ export const Home = () => {
 
                                 </div>
                             </li>
-
-
                         </ul>
+                    </div>
+
+                    <div className="books-container w-full bg-[#fcd34d] m-2">
+
+                        {iceAndFireBooks.map((book) => (
+                            <div key={book.isbn} className="bg-blue-300">
+                                <li>{book.name}</li>
+                                <Link className="p-2 bg-blue-400 text-slate-100" to={book.isbn}>Explore Quiz</Link>
+                            </div>
+                        )
+                         )}
 
                     </div>
 

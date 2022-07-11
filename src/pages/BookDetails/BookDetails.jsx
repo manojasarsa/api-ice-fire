@@ -23,22 +23,24 @@ export const BookDetails = () => {
         setSelectedBook(res);
     }, [bookid, books])
 
-    console.log("BOOK --", selectedBook);
-
     return (
         <main className="main-book-wrapper sm:h-screen">
 
-            <h2 className="hidden sm:block px-20 pt-20 text-center text-5xl self-center text-[#fff] font-extrabold">
+            <h2 
+                className="hidden sm:block px-20 pt-20 md:pt-2 xl:pt-20 text-center text-5xl md:text-3xl xl:text-5xl self-center text-[#fff] font-extrabold">
                 Whether you're starting for the first time or looking to dive deeper, we've got you covered.
             </h2>
 
             <div className="flex flex-col gap-4 w-11/12  p-2 mx-auto sm:mt-[2rem] h-fit">
 
-                <h1 className="text-5xl self-center px-5 py-4 font-extrabold text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000">About Book</h1>
+                <h1 className="text-5xl md:text-2xl xl:text-2xl self-center px-5 py-4 font-extrabold text-black  bg-[#fbbf24] hover:bg-black hover:text-[#fbbf24] ease-in-out duration-1000">
+                    About Book
+                </h1>
 
                 <div className="books-container w-full m-2 flex flex-col gap-8">
 
-                    <div className="backdrop-opacity-10 backdrop-invert bg-[#fbbf24]/30 p-10 text-center mt-4 text-black   hover:bg-black/30 hover:text-[#fbbf24] ease-in-out duration-1000">
+                    <div 
+                        className="backdrop-opacity-10 backdrop-invert bg-[#fbbf24]/30 p-10 text-center mt-4 text-black   hover:bg-black/30 hover:text-[#fbbf24] ease-in-out duration-1000">
 
                         <ul className="flex flex-col align-center gap-4">
                             <div className="">
@@ -68,7 +70,9 @@ export const BookDetails = () => {
                         </ul>
 
                     </div>
-                    <Link to={"/"} className="bg-black text-xl text-white w-fit px-4 py-2">{"<-"} Home</Link>
+                    <Link to={"/"} className="bg-black text-xl text-white w-fit px-4 py-2">
+                        {"<-"} Home
+                    </Link>
                 </div>
             </div>
 
